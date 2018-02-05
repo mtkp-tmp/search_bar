@@ -1,3 +1,1 @@
-
-if __name__ = "__main__":
-  print('let's go!')
+print('let's go!')
