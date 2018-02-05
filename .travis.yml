@@ -2,7 +2,7 @@ language: python
 rvm: 
 - 3.6
 before_install:
- - chmod +x gradlew
+ - chmod +x search_bar/main.py
 # command to install dependencies
 # install: "pip install -r requirements.txt"
 # command to run tests
