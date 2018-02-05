@@ -2,7 +2,7 @@
 
 Входные данные
 ==============
-* data.json () // https://data.mos.ru/opendata/7710881420-bary
+* data.json // https://data.mos.ru/opendata/7710881420-bary
 * текущие координаты пользователя
 
 Выходные данные
