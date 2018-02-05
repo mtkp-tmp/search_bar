@@ -1,5 +1,5 @@
 language: python
-rvm: 
+python: 
 - 3.6
 before_install:
  - chmod +x search_bar/main.py
