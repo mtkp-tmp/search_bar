@@ -1,1 +1,1 @@
-print('let\'s go!')
+print('go!')
