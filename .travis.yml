@@ -1,9 +1,6 @@
 language: python
 python: 
 - 3.6
-os:
--osx
-before_install:
- - chmod +x search_bar/main.py
- 
+install:
+  - pip install -r requirements.txt 
 script: search_bar/main.py
