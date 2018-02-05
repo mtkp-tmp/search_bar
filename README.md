@@ -1,4 +1,4 @@
-# Поиск ближайшего бара
+# Поиск ближайшего бара [![Build Status](https://travis-ci.org/mtkp-tmp/search_bar.svg?branch=master)](https://travis-ci.org/mtkp-tmp/search_bar)
 
 Входные данные
 ==============
