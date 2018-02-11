@@ -26,3 +26,4 @@ calculations.py
 output_info.py
 --------------
 Функция вывода выходных данных
+ 
