@@ -6,5 +6,5 @@ def upload_data():  		# Функция, загружающая json файл д�
     return json.load(open("data_bar.json", mode='r'))
 	
 						
-# def TransGrad(R: float):	# транформирует градусы в радианы
+# def TransGrad(R: float):	# трансформирует градусы в радианы
 #   return math.p   i * R / 180
