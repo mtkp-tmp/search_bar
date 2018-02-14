@@ -1,7 +1,7 @@
 import Calc as c
 import json
 
-filename = "D:\\TestPy\DataBars.json"
+filename = "DataBars.json"
 MyFile = open(filename, mode="r")
 
 data = json.load(MyFile)
