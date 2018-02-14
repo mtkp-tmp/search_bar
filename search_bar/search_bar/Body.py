@@ -4,7 +4,7 @@ UserCoord = {"X": 0.0, "Y": 0.0}
 
 print("Введите свои координаты")
 UserCoord["X: "] = float(input("Долгота: "))
-UserCoord["Y"] = float(input("Широта: "))
+UserCoord["Y: "] = float(input("Широта: "))
 output = ld.Poisk(UserCoord)
 
 print("Название: ",str(output["Name"]))
