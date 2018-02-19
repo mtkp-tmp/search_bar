@@ -28,3 +28,5 @@ print(data[0]['geoData']['coordinates'][0])
 print(data[0]['geoData']['coordinates'][1])
 
 fileJSON.close()
+
+#Позже перенести в upload_data.py
