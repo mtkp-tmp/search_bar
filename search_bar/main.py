@@ -16,9 +16,17 @@ print(dataFrJS)
 # адрес бара
 # количество сидячих мест
 
-# СОСТАВИТЬ КОРТЕЖИ ДЛЯ КАЖДОЙ ПАРЫ АТРИБУТ-ЗНАЧЕНИЕ
-nameBlB = re.findall(r'\w+[^"]', dataFrJS) # не работает
-print(nameBlB)
+'''name = re.findall(r'"Name": "\s*([^,]+|\S+)"', dataFrJS)
+SeatsCount = re.findall(r'"SeatsCount": \s*([^,]+|\S+)', dataFrJS)
+Address = re.findall(r'"Address": "\s*([^,]+|\S+)', dataFrJS)
+
+print(name)
+print(Address)
+print(SeatsCount)'''
+
+
+print(data[0]['Name'])
+
 
 # mas = {key:search_ID_FrJS[i] for i, key in enumerate(search_GlID_FrJS)}
 
