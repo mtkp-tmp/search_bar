@@ -6,3 +6,4 @@ if __name__ == "__main__":
     Parsed_string = up.ReadJson(f)
     Calculation = cal.CalculBar(Parsed_string)
     Out = out.OutputBar(Parsed_string, Calculation)
+     f.close()
