@@ -1,10 +1,9 @@
-from json import load as l
-from calculations import calculations as calc
-with open('C:\\Users\\Lenovo\\Desktop\\data-2897-2017-12-21.json','r') as f:
-    data, current_coords = l(f), { "Latitude_WGS84" : float(input("Введите долготу")), "Longitude_WGS84" : float(input("Введите широту")) }
-    shortest_way_distance = calc(current_coords["Latitude_WGS84"], current_coords["Longitude_WGS84"], float(data[0]["Latitude_WGS84"]), float(data[0]["Longitude_WGS84"]))
-for ind_data in range(1,len(data)):
-    closest_coords = {"Latitude_WGS84" : float(data[ind_data]["Latitude_WGS84"]), "Longitude_WGS84" : float(data[ind_data]["Longitude_WGS84"]) }
-    if shortest_way_distance > calc(current_coords["Latitude_WGS84"], current_coords["Longitude_WGS84"], closest_coords["Latitude_WGS84"], closest_coords["Longitude_WGS84"]):
-        shortest_way_distance, shortest_way = calc(current_coords["Latitude_WGS84"], current_coords["Longitude_WGS84"], closest_coords["Latitude_WGS84"], closest_coords["Longitude_WGS84"]), { "Название ближайшего бара" : data[ind_data]["Name"], "Адрес бара" : data[ind_data]["Address"], "Количество сидячих мест" : data[ind_data]["SeatsCount"] }
-print(shortest_way)
+import upload_data as upl, calculations as calc, output_info as out
+if __name__ == '__main__':
+    data = upl.read_bars()
+    while True: # Проверка на правильность ввода координат
+        try: current_coords = { "Latitude_WGS84" : float(input("Введите долготу")), "Longitude_WGS84" : float(input("Введите широту")) }
+        except ValueError: print("Введённые координаты не могут быть преобразованый в float, попробуйте ввести координаты снова")
+        else: break
+    closest_bar = calc.shortest_way(current_coords, data)
+    out.output(closest_bar)
