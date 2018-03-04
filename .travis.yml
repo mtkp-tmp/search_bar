@@ -2,5 +2,5 @@ language: python
 python: 
 - 3.6
 install:
-python -m pip install -U pip
+  - travis_wait 30 Rscript -e "0" 
 script: python search_bar/main.py
