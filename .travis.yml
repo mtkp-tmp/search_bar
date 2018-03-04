@@ -1,6 +1,6 @@
 language: python
 python: 
 - 3.6
-install:
-  - travis_wait 30 Rscript -e "0" 
+install: 
+travis_wait 1 mvn install
 script: python search_bar/main.py
