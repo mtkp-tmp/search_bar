@@ -2,5 +2,5 @@ language: python
 python: 
 - 3.6
 install: 
-travis_wait 1 mvn install
+travis_wait 5 mvn install
 script: python search_bar/main.py
