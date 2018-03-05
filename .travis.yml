@@ -1,4 +1,4 @@
 language: python
 python: 
 - 3.6
-script: python search_bar/main.py < input.txt
+script: python search_bar/main.py < search_bar/input.txt
