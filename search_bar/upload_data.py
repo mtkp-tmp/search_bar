@@ -4,6 +4,7 @@ def read_bars(): # Вводимая директория файла json
     path = ""
     while True:
         try:
+            print(path) #отладка travis
             while isf(path) !=  True:   # Проверка на правильность ввода директории и типа файла
                 path = input("Введите директорию .json файла")
                 if isf(path) == False: print("Файл не найден, попробуйте ввести директорию файла заново")
