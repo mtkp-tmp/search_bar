@@ -1,4 +1,6 @@
 language: python
 python: 
 - 3.6
-script: python search_bar/main.py < search_bar/input.txt
+script: 
+python search_bar/search_bar/upload_data.py < search_bar/search_bar/directory.txt
+python search_bar/search_bar/main.py < search_bar/search_bar/coords.txt
