@@ -1,2 +1,1 @@
-40
-55
+{ "Latitude_WGS84" : 45.0, "Longitude_WGS84" : 50.0 }
