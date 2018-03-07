@@ -1,7 +1,7 @@
 from json import load as l
 from os.path import isfile as isf
 def read_bars(): # Вводимая директория файла json
-    path = ""
+    path = "data.json"
     while True:
         try:
             while isf(path) !=  True:   # Проверка на правильность ввода директории и типа файла
