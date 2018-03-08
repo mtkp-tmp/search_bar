@@ -2,7 +2,7 @@ from json import load as l
 from os.path import isfile as isf
 def read_bars(): # Вводимая директория файла json
     path = "search_bar/data.json"  
-    with open(path,'r',encoding='windows-1251') as f: return(l(f)) # Открытие файла    
+    with open(path,'r',encoding='utf-8') as f: return(l(f)) # Открытие файла    
     '''
     while True:
         try:
