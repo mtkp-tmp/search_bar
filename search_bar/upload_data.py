@@ -1,9 +1,9 @@
 from json import load as l
+from codecs import open as o
 def read_bars(): # Вводимая директория файла json
     try:
         path = input("Введите директорию .json файла") #"search_bar/data.json"  
-        #with open(path[0:len(path)-1],'r',encoding='utf-8') as f: return(l(f))
-        with open(path[0:len(path)-1],'r') as f: return(l(f)) # Открытие файла и удаление символа возврата каретки \r 
+        with o(path[0:len(path)-1],'r', 'utf-8') as f: return(l(f)) # Открытие файла и удаление символа возврата каретки \r 
     except OSError: print("Файл не найден!")
         
     '''
