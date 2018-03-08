@@ -1,12 +1,14 @@
 from json import load as l
-from os.path import isfile as isf
 def read_bars(): # Вводимая директория файла json
-    path = input("Введите директорию .json файла") #"search_bar/data.json"  
-    path = path[0:len(path)-1] #удаление символа возврата каретки \r
-    if isf(path) == False: print("Файл не найден, попробуйте ввести директорию файла заново")
-    elif isf(path) == True: print("Файл найден!")
-    print("path = " + path)
-    with open(path,'r',encoding='utf-8') as f: return(l(f)) # Открытие файла    
+    try:
+        path = input("Введите директорию .json файла") #"search_bar/data.json"  
+        path = path[0:len(path)-1] #удаление символа возврата каретки \r
+        if isf(path) == False: print("Файл не найден, попробуйте ввести директорию файла заново")
+        elif isf(path) == True: print("Файл найден!")
+        print("path = " + path)
+        with open(path,'r',encoding='utf-8') as f: return(l(f)) # Открытие файла    
+    except OSError: print("Файл не найден!")
+        
     '''
     while True:
         try:
