@@ -4,7 +4,7 @@ def read_bars(): # Вводимая директория файла json
     path = input("Введите директорию .json файла") #"search_bar/data.json"  
     path = path[0:len(path)-1] #удаление символа возврата каретки \r
     if isf(path) == False: print("Файл не найден, попробуйте ввести директорию файла заново")
-        else: print("Файл найден!")
+    elif isf(path) == True: print("Файл найден!")
     print("path = " + path)
     with open(path,'r',encoding='windows-1251') as f: return(l(f)) # Открытие файла    
     '''
