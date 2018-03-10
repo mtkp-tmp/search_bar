@@ -1,7 +1,9 @@
-import upload_data as upl, calculations as calc, output_info as out
-if __name__ == '__main__':
-    data = upl.read_bars()
-    try: current_coords = { "Latitude_WGS84" : float(input("Введите долготу")), "Longitude_WGS84" : float(input("Введите широту")) }
-    except ValueError: print("Введённые координаты не могут быть преобразованый в float, попробуйте ввести координаты снова")
-    closest_bar = calc.shortest_way(current_coords, data)
-    out.output(closest_bar)
+from json import load as l
+from os.path import isfile as isf
+def read_bars(): # Вводимая директория файла json
+    while True:
+        try:
+            path = input("Введите директорию .json файла").strip() #"search_bar/data.json"  
+            with open(path,'r') as f: return(l(f)) # Открытие файла и удаление символа возврата каретки \r 
+            if isf(path)==True: break
+        except OSError: print("Файл не найден!")
