@@ -1,6 +1,4 @@
 language: python
 python: 
 - 3.6
-install: 
-  - pip install unidecode
 script: python search_bar/main.py < search_bar/coords.txt
