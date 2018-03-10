@@ -1,6 +1,6 @@
 import upload_data as upl, calculations as calc, output_info as out
 if __name__ == '__main__':
-    data = upl.read_bars().decode('latin1').encode('utf-8')
+    data = upl.read_bars()
     while True:
         try: current_coords = { "Latitude_WGS84" : float(input("Введите долготу")), "Longitude_WGS84" : float(input("Введите широту")) }
         except ValueError:
