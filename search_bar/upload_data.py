@@ -4,7 +4,7 @@ def read_bars(): # Вводимая директория файла json
     while True:
         try:
             path = input("Введите директорию .json файла").strip() #"search_bar/data.json"  
-            with open(path, "r") as f: return(l(f)).decode('unicode_escape').encode('utf-8') # Открытие файла и удаление символа возврата каретки \r 
+            with open(path, "r", encoding="latin-1") as f: return(l(f)) # Открытие файла и удаление символа возврата каретки \r 
             if isf(path)==True: break
         except OSError: print("Файл не найден!")
         
