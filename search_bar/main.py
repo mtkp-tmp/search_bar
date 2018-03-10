@@ -7,6 +7,5 @@ if __name__ == '__main__':
             print("Введённые координаты не могут быть преобразованый в float, попробуйте ввести координаты снова")
             try: current_coords
             except NameError: current_coords = {}
-        if len(current_coords.keys()) == 2: break
-    closest_bar = calc.shortest_way(current_coords, data)
-    out.output(closest_bar)
+        if len(current_coords.keys())== 2: break
+    out.output(calc.shortest_way(current_coords, data))
