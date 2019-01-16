@@ -1,0 +1,2 @@
+from json import loads as l
+print((lambda mylocation : l(open('data-2897-2019-01-10.json').read())[min(range(len(l(open('data-2897-2019-01-10.json').read()))), key=[((mylocation[0]-distance[0])**2+(mylocation[1]-distance[1])**2) for distance in [dct['geoData']['coordinates'] for dct in l(open('data-2897-2019-01-10.json').read())]].__getitem__)])([float(input('Введите долготу')), float(input('Введите широту'))]))
